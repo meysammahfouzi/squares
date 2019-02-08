@@ -10,58 +10,30 @@ class MainPage extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Expanded(
                 flex: 2,
-                child: Stack(
-                  alignment: AlignmentDirectional.center,
-                  children: <Widget>[
-                    Column(
-                      children: <Widget>[
-                        Container(
-                          height: 50,
-                          color: Colors.red,
-                        ),
-                        Container(
-                          height: 50,
-                          color: Colors.red,
-                        ),
-                      ],
+                child: Container(
+                  height: 100,
+                  color: Colors.red,
+                  child: Center(
+                    child: Text(
+                      "1",
+                      style: TextStyle(fontSize: 50, color: Colors.white),
                     ),
-                    Text(
-                      '1',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 50,
-                      ),
-                    )
-                  ],
+                  ),
                 ),
               ),
               Expanded(
                 flex: 1,
-                child: Stack(
-                  alignment: AlignmentDirectional.bottomCenter,
-                  children: <Widget>[
-                    Container(
-                      height: 100,
-                      color: Colors.orange,
-                    ),
-                    Text(
-                      '2',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 50,
-                      ),
-                    )
-                  ],
+                child: Container(
+                  height: 100,
+                  color: Colors.orange,
                 ),
               ),
             ],
           ),
           Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
               Expanded(
                 flex: 1,
@@ -70,11 +42,8 @@ class MainPage extends StatelessWidget {
                   color: Colors.green,
                   child: Center(
                     child: Text(
-                      '4',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 50,
-                      ),
+                      "4",
+                      style: TextStyle(fontSize: 50, color: Colors.white),
                     ),
                   ),
                 ),
@@ -91,19 +60,21 @@ class MainPage extends StatelessWidget {
                             color: Colors.purple,
                             child: Center(
                               child: Text(
-                                '5',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 50,
-                                ),
+                                "5",
+                                style: TextStyle(fontSize: 50, color: Colors.white),
                               ),
                             ),
                           ),
                         ),
                         Expanded(
                           child: Container(
+                            alignment: Alignment(0, -2.5),
                             height: 100,
                             color: Colors.orange,
+                            child: Text(
+                              "2",
+                              style: TextStyle(fontSize: 50, color: Colors.white),
+                            ),
                           ),
                         ),
                       ],
@@ -113,17 +84,14 @@ class MainPage extends StatelessWidget {
                       color: Colors.blue,
                       child: Center(
                         child: Text(
-                          '3',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 50,
-                          ),
+                          "3",
+                          style: TextStyle(fontSize: 50, color: Colors.white),
                         ),
                       ),
                     ),
                   ],
                 ),
-              ),
+              )
             ],
           ),
         ],
